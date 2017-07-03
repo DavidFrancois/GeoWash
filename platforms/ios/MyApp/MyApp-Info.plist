@@ -47,6 +47,8 @@
     </array>
     <key>UIRequiresFullScreen</key>
     <true/>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string/>
     <key>NSAppTransportSecurity</key>
     <dict>
       <key>NSExceptionDomains</key>
@@ -56,11 +58,19 @@
           <key>NSExceptionAllowsInsecureHTTPLoads</key>
           <true/>
         </dict>
+        <key>172.19.33.49</key>
+        <dict>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+        </dict>
+        <key>172.20.10.2</key>
+        <dict>
+          <key>NSExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+        </dict>
       </dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string/>
   </dict>
 </plist>

@@ -47,7 +47,7 @@ export class TestPage implements OnInit {
   //                 });
   // }
 
-  subscribe() {
+  subscribe() {    
     this.customerService.createCustomer(this.data);
                     // .subscribe(
                     //   customer => console.log('customer', customer),

@@ -14,7 +14,6 @@ export class HttpService {
     constructor(private http: Http) {}
 
     post(url, data): Observable<Customer> {
-        console.log('par ici');
         return this.http.post(url,data)
                         .map(this.extractData)
                         .catch(this.handleError);
@@ -22,7 +21,6 @@ export class HttpService {
 
     private extractData(res: Response) {
         let body = res.json();
-        console.log(body, 'BODDYYYYYY');
         return body || { };
     }
 

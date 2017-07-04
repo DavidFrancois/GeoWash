@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/GrandZob/GeoWash/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/GrandZob/GeoWash/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\L3\PRAG\Geow\GeoWash\platforms\android\CordovaLib\src\main\shaders"/></dataSet><dataSet config="debug"><source path="D:\L3\PRAG\Geow\GeoWash\platforms\android\CordovaLib\src\debug\shaders"/></dataSet></merger>

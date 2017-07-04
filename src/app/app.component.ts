@@ -5,6 +5,13 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { TestPage } from '../pages/pagetest/pagetest'
+import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
+import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import { InscriptionPage } from '../pages/inscription/inscription';
+import { ConnexionPage } from '../pages/connexion/connexion';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +25,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = HelloIonicPage;
+  rootPage = HomePage;
   pages: Array<{title: string, component: any}>;
 
   constructor(

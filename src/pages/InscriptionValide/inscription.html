@@ -7,22 +7,13 @@
 <ion-content padding>
 
 
-  
+  <ion-icon id="logoUserInscription" name="contact" item-start></ion-icon>
 
 
 <div id="formulaireInscription">
   
   <ion-item>
     <ion-input [(ngModel)]="Username" type="text" placeholder="Username"></ion-input>
-  </ion-item>
-
-   <ion-item>
-    <ion-input [(ngModel)]="Mdp" type="text" placeholder="Mot de passe"></ion-input>
-  </ion-item>
-
-
-   <ion-item>
-    <ion-input [(ngModel)]="MdpC" type="text" placeholder="Confirmation Mot de passe"></ion-input>
   </ion-item>
   
   <ion-item>
@@ -54,9 +45,9 @@
     <ion-input [(ngModel)]="NumPortable" type="text" placeholder="N°Portable"></ion-input>
   </ion-item>
 
-  <div id="BInscription">
-    <button (tap)="showDetails() " ion-button block>S'enregistrer</button>
-  </div>
+<div id="BInscription">
+  <button (tap)="showDetails()" ion-button block>S'enregistrer</button>
+</div>
 
  </div>
 </ion-content>

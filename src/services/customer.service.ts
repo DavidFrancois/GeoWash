@@ -12,7 +12,7 @@ import { HttpService } from './http-request.service';
 @Injectable()
 export class CustomerService {
 
-    private customerUrl = 'http://93.118.32.126:8088/user';
+    private customerUrl = 'http://93.118.32.126:8088/customer';
 
     constructor (private httpService: HttpService) {}
 

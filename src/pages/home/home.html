@@ -9,15 +9,11 @@
 <ion-content>
 
 <div id="imgFondEcranA">
- <img id="imgFondEcranA" src="img/headerFondConnexion.png">
+ <img id = "img" src="img/headerFondConnexion.png">
  </div>
 
 
-<div id="imgLogo">
-  <img src="img/logoAccueil.png">
-</div>
-
-<div id="formulaireInscription"> 
+<div  id="formulaireConnexion"> 
   <ion-list inset>
 
   <ion-item>
@@ -30,15 +26,13 @@
 
   </ion-list>
 
-  
-
 </div>
 
-<div id="wrapperConnexion">
-   <button id="BConnexion" (tap)="showFormConnexion()" ion-button block>Connexion</button>
+<div id="wrapperConnexion" padding>
+ <button id="BConnexion" (tap)="showFormConnexion()" ion-button block>Connexion</button>
 </div>
 
-<div id="BInscription">
+<div id="BInscription" padding>
   <button (tap)="showFormInscription()" ion-button clear>Pas encore inscrit ? Inscrivez vous</button>
 </div>
 

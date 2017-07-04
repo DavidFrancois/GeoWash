@@ -26,10 +26,20 @@ export class HomePage {
   }
 
    private showFormConnexion() {
-    this.navCtrl.push(ConnexionPage,{
+    if (this.pseudo && this.mdp) {
+      this.navCtrl.push(ConnexionPage,{
         pseudo: this.pseudo, 
         mdp: this.mdp
       });
+    } else {
+      let alert = this.alertCtrl.create({
+        title: "Informations éronnées",
+        subTitle: "Données manquantes",
+        buttons: ['OK']
+      });
+      alert.present();
+    }
+   
   }
 
 showAlert() {

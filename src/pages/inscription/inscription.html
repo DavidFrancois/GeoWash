@@ -13,6 +13,7 @@
 <div id="formulaireInscription">
   
   <ion-item>
+  <ion-icon name="person"></ion-icon>
     <ion-input [(ngModel)]="Username" type="text" placeholder="Username"></ion-input>
   </ion-item>
 
@@ -54,9 +55,9 @@
     <ion-input [(ngModel)]="NumPortable" type="text" placeholder="N°Portable"></ion-input>
   </ion-item>
 
-  <div id="BInscription">
-    <button (tap)="showDetails() " ion-button block>S'enregistrer</button>
-  </div>
-
  </div>
+
+ <div id="BInscription">
+    <button (tap)="showDetails()" ion-button block>S'enregistrer</button>
+  </div>
 </ion-content>

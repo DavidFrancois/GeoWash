@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inscription</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-icon id="logoUserInscription" name="contact" item-start></ion-icon>
+
+
+<div id="formulaireInscription">
+  
+  <ion-item>
+    <ion-input [(ngModel)]="Username" type="text" placeholder="Username"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-input [(ngModel)]="Nom" type="text" placeholder="Nom"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-input [(ngModel)]="Prenom" type="text" placeholder="Prénom"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="Adresse" type="text" placeholder="Adresse"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="CodePostal" type="text" placeholder="Code postal"></ion-input>
+  </ion-item>
+
+   <ion-item>
+    <ion-input [(ngModel)]="Email" type="text" placeholder="Email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="NumPhone" type="text" placeholder="N°Téléphone"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="NumPortable" type="text" placeholder="N°Portable"></ion-input>
+  </ion-item>
+
+<div id="BInscription">
+  <button (tap)="showDetails()" ion-button block>S'enregistrer</button>
+</div>
+
+ </div>
+</ion-content>

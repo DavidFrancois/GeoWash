@@ -1,0 +1,56 @@
+<!--<ion-header>
+  <ion-navbar>
+    <ion-title>Accueil</ion-title>
+  </ion-navbar>
+</ion-header>
+-->
+
+ 
+<ion-content>
+
+<div id="imgFondEcranA">
+ <img id = "img" src="img/headerFondConnexion.png">
+ </div>
+
+
+<div  id="formulaireConnexion"> 
+  <ion-list inset>
+
+  <ion-item>
+    <ion-input [(ngModel)]="pseudo" type="text" placeholder="Username"></ion-input>
+  </ion-item>
+  
+    <ion-item>
+      <ion-input [(ngModel)]="mdp" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</div>
+
+<div id="wrapperConnexion" padding>
+ <button id="BConnexion" (tap)="showFormConnexion()" ion-button block>Connexion</button>
+</div>
+
+<div id="BInscription" padding>
+  <button (tap)="showFormInscription()" ion-button clear>Pas encore inscrit ? Inscrivez vous</button>
+</div>
+
+
+
+
+
+
+   <!-- Real floating action button, fixed. It will not scroll with the content -->
+  
+   <ion-fab right bottom>
+    <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
+

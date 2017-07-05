@@ -5,58 +5,110 @@
 </ion-header>
 
 <ion-content padding>
+<div>
+  <form [formGroup]="subscriptionForm"  (ngSubmit)="onSubmit()">
+      
+      <ion-item>
+        <ion-input type="text" id="username" class="form-control"
+               formControlName="username" required placeholder="Nom d'utilisateur"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.username">
+          {{ formErrors.username }}
+      </ion-item>
 
+      <ion-item>
+        <ion-input type="password" id="password" class="form-control"
+               formControlName="password" required placeholder="Mot de passe"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.password">
+          {{ formErrors.password }}
+      </ion-item>
 
-  
+      <ion-item>
+        <ion-input type="password" id="passwordCheck" class="form-control"
+               formControlName="passwordCheck" required placeholder="Confirmation Mot de passe"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.passwordCheck">
+          {{ formErrors.passwordCheck }}
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="firstname" id="firstname" class="form-control"
+               formControlName="firstname" required placeholder="Prénom"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.firstname">
+          {{ formErrors.firstname }}
+      </ion-item>
 
+      <ion-item>
+        <ion-input type="text" id="lastname" class="form-control"
+               formControlName="lastname" required placeholder="Nom"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.lastname">
+          {{ formErrors.lastname }}
+      </ion-item>
 
-<div id="formulaireInscription">
-  
-  <ion-item>
-    <ion-input [(ngModel)]="Username" type="text" placeholder="Username"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-input type="text" id="email" class="form-control"
+               formControlName="email" required placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.email">
+          {{ formErrors.email }}
+      </ion-item>
 
-   <ion-item>
-    <ion-input [(ngModel)]="Mdp" type="text" placeholder="Mot de passe"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-input type="text" id="address" class="form-control"
+               formControlName="address" required placeholder="Adresse"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.address">
+          {{ formErrors.address }}
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" id="city" class="form-control"
+               formControlName="city" required placeholder="Ville"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.city">
+          {{ formErrors.city }}
+      </ion-item>
 
+      <ion-item>
+        <ion-input type="number" id="zipCode" class="form-control"
+               formControlName="zipCode" required placeholder="Code postal"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.zipCode">
+          {{ formErrors.zipCode }}
+      </ion-item>
 
-   <ion-item>
-    <ion-input [(ngModel)]="MdpC" type="text" placeholder="Confirmation Mot de passe"></ion-input>
-  </ion-item>
-  
-  <ion-item>
-    <ion-input [(ngModel)]="Nom" type="text" placeholder="Nom"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-input type="number" id="birthdate" class="form-control"
+               formControlName="birthdate" required placeholder="Date de naissance"></ion-input>
+      </ion-item>
 
+      <ion-item *ngIf="formErrors.birthdate">
+          {{ formErrors.birthdate }}
+      </ion-item>
 
-  <ion-item>
-    <ion-input [(ngModel)]="Prenom" type="text" placeholder="Prénom"></ion-input>
-  </ion-item>
+      <ion-item>
+        <ion-input type="number" id="mobilePhone" class="form-control"
+               formControlName="mobilePhone" required placeholder="Téléphone Mobile"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="formErrors.mobilePhone">
+          {{ formErrors.mobilePhone }}
+      </ion-item>
+      
+      <ion-item>
+        <ion-input type="number" id="phone" class="form-control"
+               formControlName="phone" required placeholder="Téléphone fixe"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-input [(ngModel)]="Adresse" type="text" placeholder="Adresse"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input [(ngModel)]="CodePostal" type="text" placeholder="Code postal"></ion-input>
-  </ion-item>
-
-   <ion-item>
-    <ion-input [(ngModel)]="Email" type="text" placeholder="Email"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input [(ngModel)]="NumPhone" type="text" placeholder="N°Téléphone"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input [(ngModel)]="NumPortable" type="text" placeholder="N°Portable"></ion-input>
-  </ion-item>
-
-  <div id="BInscription">
-    <button (tap)="showDetails() " ion-button block>S'enregistrer</button>
+      <ion-item *ngIf="formErrors.phone">
+          {{ formErrors.phone }}
+      </ion-item>
+      <div id="BInscription">
+        <button type="submit" class="btn btn-default"
+             [disabled]="!subscriptionForm.valid" ion-button block >S'enregistrer</button>
+      </div>
+    </form>
   </div>
 
- </div>
 </ion-content>

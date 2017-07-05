@@ -1,7 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+
 import { NavController, ToastController} from 'ionic-angular';
-import {ConnexionPage} from "../connexion/connexion"
-import {HomePage} from "../home/home"
+import { ConnexionPage } from "../connexion/connexion";
+import { HomePage } from "../home/home";
+
+import { Customer } from "../../entities/customer";
 
 @Component({
   selector: 'page-inscription',
@@ -9,40 +13,99 @@ import {HomePage} from "../home/home"
 })
 export class InscriptionPage {
 
-  Username: String;
-  Mdp: String;
-  MdpC: String;
-  Nom: String;
-  Prenom: String;
-  Adresse: String;
-  CodePostal: String;
-  Email: String;
-  NumPhone: String;
-  NumPortable: String;
+  customer = new Customer();
+  passwordCheck: string;
+  submitted = false;
 
-
-
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
-
+  onSubmit() {
+    this.customer = this.subscriptionForm.value;
   }
 
+  subscriptionForm: FormGroup;
+  constructor(private fb: FormBuilder) { }
 
+  ngOnInit(): void {
+    this.buildForm();
+  }
 
-  showDetails() {
-    let toast = this.toastCtrl.create({
-      message: 'Vous êtes bien inscrit.',
-      duration: 3000
+  buildForm(): void {
+    this.subscriptionForm = this.fb.group({
+      'username': [this.customer.username, [
+          Validators.required,
+          Validators.minLength(6),
+          Validators.maxLength(32)
+        ]
+      ],
+      'password': [this.customer.password, [
+          Validators.required,
+          Validators.minLength(8)
+        ]  
+      ],
+      'passwordCheck': [this.passwordCheck, [
+          Validators.required
+        ]
+      ],
+      'email': [this.customer.email, Validators.required],
+      'mobilePhone': [this.customer.mobilePhone, Validators.required],
+      'firstname': [this.customer.firstname],
+      'lastname': [this.customer.lastname],
+      'address': [this.customer.address],
+      'city': [this.customer.city],
+      'zipCode': [this.customer.zipCode],
+      'phone': [this.customer.phone],
+      'birthdate': [this.customer.birthdate]
+
     });
-    toast.present();
-    this.navCtrl.push(HomePage);
+
+    this.subscriptionForm.valueChanges.subscribe(data => this.onValueChanged(data));
+
+    this.onValueChanged();
   }
 
-  // showPageConnexion(){
-  //   console.log("A");
-  //   this.navCtrl.push(ConnexionPage);
+  onValueChanged(data?: any) {
+    if (!this.subscriptionForm) { return; }
+    const form = this.subscriptionForm;
 
-  // }
+    for (const field in this.formErrors) {
+      this.formErrors[field] = '';
+      const control = form.get(field);
 
-  
+      if (control && control.dirty && !control.valid) {
+        const messages = this.validationMessages[field];
+        for (const key in control.errors) {
+          this.formErrors[field] += messages[key] + ' ';
+        }
+      } 
+    }
   }
+
+  formErrors = {
+    'username': '',
+    'password': '',
+    'passwordCheck': '',
+    'email': '',
+    'mobilePhone': ''
+  };
+
+  validationMessages = {
+    'username': {
+      'required':      "Champ requis.",
+      'minlength':     "Au moins 6 caractères.",
+      'maxlength':     "Pas plus de 32 caractères"
+    },
+    'password': {
+      'required': 'Ce champ est requis.',
+      'minlength': 'Au moins 8 caractères.'
+    },
+    'passwordCheck': {
+      'required': 'Champ requis',
+    },
+    'email': {
+      'required': "Champ requis"
+    },
+    'mobilePhone': {
+      'required': "Champ requis." 
+    }
+  };
+}
 

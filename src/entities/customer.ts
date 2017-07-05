@@ -1,17 +1,14 @@
 export class Customer {
+    username: string;
     email: string;
-    name: string;
-    firstName: string;
+    lastname: string;
+    firstname: string;
     birthdate: number;
     password: string;
-    mobilePhoneNumber: number;
-    homePhoneNumber: number;
-    devicetype: string;
-    created: number;
+    mobilePhone: number;
+    phone: number;
     address: string;
     city: string;
-    zip: string;
-    position: any;
-    role: any;
-    statut: any;
+    zipCode: string;
+    constructor() {}
 }

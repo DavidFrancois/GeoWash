@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, App, MenuController  } from 'ionic-angular';
 import {InscriptionPage} from "../inscription/inscription"
 import {ConnexionPage} from "../connexion/connexion"
 

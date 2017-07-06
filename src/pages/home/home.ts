@@ -25,12 +25,12 @@ export class HomePage {
     this.navCtrl.push(InscriptionPage);
   }
 
-   private showFormConnexion() {
+   private showFormConnexion(event) {
     if (this.pseudo && this.mdp) {
-      this.navCtrl.push(ConnexionPage,{
+      this.navCtrl.setRoot(ConnexionPage,{
         pseudo: this.pseudo, 
         mdp: this.mdp
-      });
+      }, {animate: true, direction: "forward"});
     } else {
       let alert = this.alertCtrl.create({
         title: "Informations éronnées",

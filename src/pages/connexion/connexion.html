@@ -1,10 +1,47 @@
+
 <ion-header>
-  <ion-navbar>
-    <ion-title>Connexion</ion-title>
+  <ion-navbar hideBackButton *navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
+
+
+
 <ion-content padding>
 
-<h2>Bonjour {{pseudo}}</h2>
+ <ion-card>
+
+    <img src="img/Profil.png"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        Bonjour {{pseudo}}
+      </ion-card-title>
+      
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='ios-car' item-start style="color: #d03e84"></ion-icon>
+      Voiture(s)
+      <ion-badge item-end>0</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='ios-color-fill-outline' item-start style="color: #d03e84"></ion-icon>
+      Faire une demande
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='ios-clock-outline' item-start style="color: #55acee"></ion-icon>
+      Historique des demandes
+      <ion-badge item-end>0</ion-badge>
+    </ion-item>
+
+  </ion-card>
+
 </ion-content>
+

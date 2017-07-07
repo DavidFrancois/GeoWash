@@ -11,6 +11,11 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { InscriptionPage } from '../pages/inscription/inscription';
 import { ConnexionPage } from '../pages/connexion/connexion';
+import { ModifProfil } from '../pages/modifProfil/modifProfil';
+import { GeestionVoiture } from '../pages/gestionVoiture/gestionVoiture';
+import { HistoriqueLavage } from '../pages/historiqueLavage/historiqueLavage';
+import { PrendreRDV } from '../pages/prendreRDV/prendreRDV';
+import { MapPage } from '../pages/map/map';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -39,10 +44,11 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage },
-      { title: 'test page', component: TestPage},
-      { title: 'Connexion', component: ConnexionPage }
+      { title: 'Gérer mon Profil', component: ModifProfil},
+      { title: 'Gérer mes voitures', component: GeestionVoiture },
+      { title: 'Historique des lavages', component: HistoriqueLavage},
+      { title: 'Prendre rendez-vous', component: PrendreRDV },
+      { title: 'Se déconnecter', component: HomePage },
     ];
   }
 

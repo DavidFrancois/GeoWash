@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
-import { NavController, ToastController} from 'ionic-angular';
+import { NavController, ToastController, AlertController} from 'ionic-angular';
 import { ConnexionPage } from "../connexion/connexion";
 import { HomePage } from "../home/home";
-import { InscriptionPage2 } from "../inscription2/inscription2";
+import { InscriptionPage3 } from "../inscription3/inscription3";
 
 import { Customer } from "../../entities/customer";
 
 @Component({
-  selector: 'page-inscription',
-  templateUrl: 'inscription.html'
+  selector: 'page-inscription2',
+  templateUrl: 'inscription2.html'
 })
-export class InscriptionPage {
+export class InscriptionPage2 {
 
   customer = new Customer();
   passwordCheck: string;
@@ -20,14 +20,27 @@ export class InscriptionPage {
 
   onSubmit() {
     this.customer = this.subscriptionForm.value;
-    this.navCtrl.push(InscriptionPage2);
+    this.navCtrl.push(InscriptionPage3);
+    
+  
+    
   }
 
   subscriptionForm: FormGroup;
-  constructor(private fb: FormBuilder, private navCtrl: NavController) { }
+  constructor(private fb: FormBuilder, private navCtrl: NavController, private alertCtrl: AlertController, public toastCtrl: ToastController) { }
 
   ngOnInit(): void {
     this.buildForm();
+  }
+
+  saveNAdd() {
+    this.subscriptionForm.reset();
+    let alert = this.alertCtrl.create({
+      title: "Véhicule ajouté",
+      buttons: ['OK']
+    });
+    alert.present();
+
   }
 
   buildForm(): void {

@@ -18,11 +18,11 @@
   <ion-list inset>
 
   <ion-item>
-    <ion-input [(ngModel)]="pseudo" type="text" placeholder="Username"></ion-input>
+    <ion-input [(ngModel)]="pseudo" type="text" placeholder="Nom utilisateur ou  mail"></ion-input>
   </ion-item>
   
     <ion-item>
-      <ion-input [(ngModel)]="mdp" type="password" placeholder="Password"></ion-input>
+      <ion-input [(ngModel)]="mdp" type="password" placeholder="Mot de passe"></ion-input>
     </ion-item>
 
   </ion-list>
@@ -31,11 +31,14 @@
 
 <div id="wrapperConnexion" padding>
  <button id="BConnexion" (click)="showFormConnexion()" ion-button block>Connexion</button>
+ 
 </div>
 
 <div id="BInscription" padding>
-  <button (tap)="showFormInscription()" ion-button clear>Pas encore inscrit ? Inscrivez vous</button>
-</div>
+  <button (tap)="showFormInscription()" ion-button clear>Pas encore inscrit ? Inscrivez vous</button><br>
+  <button (tap)="showMap()" ion-button clear>Ignorer cette étape</button>
+  </div>
+
 
 
 

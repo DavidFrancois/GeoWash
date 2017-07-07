@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, App, MenuController  } from 'ionic-angular';
 import {InscriptionPage} from "../inscription/inscription"
 import {ConnexionPage} from "../connexion/connexion"
+import {MapPage} from "../map/map"
 
 @Component({
   selector: 'page-home',
@@ -50,8 +51,13 @@ showAlert() {
     });
     alert.present();
   }
-   
+
+showMap(){
+  this.navCtrl.push(MapPage);
 }
+ 
+}
+
 
 export class PlaceholderPage { 
   

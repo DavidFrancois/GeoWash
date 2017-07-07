@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Véhicule(s)</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<div>
+  <form [formGroup]="subscriptionForm"  (ngSubmit)="onSubmit()">
+      
+      <ion-item>
+        <ion-input type="text" id="username" class="form-control"
+               formControlName="username" required placeholder="Immatriculation du véhicule"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Type de véhicule</ion-label>
+        <ion-select>
+            <ion-option value="f">Voiture de fonction</ion-option>
+            <ion-option value="m">Voiture personnelle</ion-option>
+        </ion-select>
+        </ion-item>
+
+        <button (tap)="saveNAdd()" ion-button clear>+ Sauvegarder et ajouter un véhicule</button><br>
+
+
+      <div id="BInscription">
+        <button type="submit" class="btn btn-default"
+              ion-button block >Etape suivante</button>
+      </div>
+    </form>
+  </div>
+
+
+</ion-content>

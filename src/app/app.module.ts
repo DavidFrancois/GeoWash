@@ -17,7 +17,15 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { InscriptionPage } from '../pages/inscription/inscription';
+import { InscriptionPage2 } from '../pages/inscription2/inscription2';
+import { InscriptionPage3 } from '../pages/inscription3/inscription3';
 import { ConnexionPage } from '../pages/connexion/connexion';
+import { ModifProfil } from '../pages/modifProfil/modifProfil';
+import { GeestionVoiture } from '../pages/gestionVoiture/gestionVoiture';
+import { HistoriqueLavage } from '../pages/historiqueLavage/historiqueLavage';
+import { PrendreRDV } from '../pages/prendreRDV/prendreRDV';
+import { MapPage } from '../pages/map/map';
+
 
 
 import { requestOptionsProvider }   from '../services/default-request-options.service';
@@ -40,7 +48,15 @@ import { Geolocation } from '@ionic-native/geolocation';
     HomePage,
     TabsPage,
     InscriptionPage,
-    ConnexionPage
+    InscriptionPage2,
+    InscriptionPage3,
+    ConnexionPage,
+    ModifProfil,
+    GeestionVoiture,
+    HistoriqueLavage,
+    PrendreRDV,
+    MapPage
+
   ],
   imports: [
     BrowserModule,
@@ -56,11 +72,18 @@ import { Geolocation } from '@ionic-native/geolocation';
     HomePage,
     TabsPage,
     InscriptionPage,
+    InscriptionPage2,
+    InscriptionPage3,
     ConnexionPage,
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    TestPage
+    TestPage,
+    ModifProfil,
+    GeestionVoiture,
+    HistoriqueLavage,
+    PrendreRDV,
+    MapPage
   ],
   providers: [
     StatusBar,

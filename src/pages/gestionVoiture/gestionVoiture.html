@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Gestion voiture</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<h1>Liste des voitures</h1>
+<div id="car">
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/car.jpg">
+      </ion-thumbnail>
+      <h2>Voiture n°1</h2>
+      <small><strong>Immatriculation</strong></small> <br>
+      <small><strong>Couleur</strong></small> <br>
+      <small><strong>Modèle</strong></small>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/carr.png">
+      </ion-thumbnail>
+      <h2>Voiture n°2</h2>
+      <small><strong>Immatriculation</strong></small><br>
+      <small><strong>Couleur</strong></small> <br>
+      <small><strong>Modèle</strong></small>
+
+      
+    </ion-item>
+
+ </ion-list>
+<ion-item>
+   
+  <button (tap)="saveNAdd()" ion-button clear ><ion-icon name="add">Ajouter un véhicule</ion-icon></button>
+</ion-item>
+
+ 
+ 
+
+
+
+
+  
+</div>
+</ion-content>

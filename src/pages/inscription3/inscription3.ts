@@ -4,15 +4,15 @@ import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angul
 import { NavController, ToastController} from 'ionic-angular';
 import { ConnexionPage } from "../connexion/connexion";
 import { HomePage } from "../home/home";
-import { InscriptionPage2 } from "../inscription2/inscription2";
+
 
 import { Customer } from "../../entities/customer";
 
 @Component({
-  selector: 'page-inscription',
-  templateUrl: 'inscription.html'
+  selector: 'page-inscription3',
+  templateUrl: 'inscription3.html'
 })
-export class InscriptionPage {
+export class InscriptionPage3 {
 
   customer = new Customer();
   passwordCheck: string;
@@ -20,11 +20,16 @@ export class InscriptionPage {
 
   onSubmit() {
     this.customer = this.subscriptionForm.value;
-    this.navCtrl.push(InscriptionPage2);
+    this.navCtrl.push(HomePage);
+    let toast = this.toastCtrl.create({
+      message: 'Vous êtes bien inscrit',
+      duration: 3000
+    });
+    toast.present();
   }
 
   subscriptionForm: FormGroup;
-  constructor(private fb: FormBuilder, private navCtrl: NavController) { }
+  constructor(private fb: FormBuilder, private navCtrl: NavController, public toastCtrl: ToastController) { }
 
   ngOnInit(): void {
     this.buildForm();
